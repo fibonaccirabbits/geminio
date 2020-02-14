@@ -1,0 +1,4 @@
+.git/lfs/objects/22/6b/226ba91f4f10a8df1c193a1b03f755ea38dd70ddca44d46acbb9e0f6f1cd5cce filter=lfs diff=lfs merge=lfs -text
+src/datasets/pooled/1FSK_5pctsData.txt filter=lfs diff=lfs merge=lfs -text
+src/datasets/pooled/1OB1_5pctsData.txt filter=lfs diff=lfs merge=lfs -text
+.git/lfs/objects/1b/d2/1bd22a6f3a36e79359cb7223fe6283b49c0148321bbeb8a5333376db3ea50de6 filter=lfs diff=lfs merge=lfs -text

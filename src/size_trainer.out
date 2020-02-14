@@ -1,0 +1,59 @@
+2020-02-14 11:10:41.207003: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-02-14 11:10:41.213205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:82:00.0
+2020-02-14 11:10:41.213642: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-02-14 11:10:41.215717: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-02-14 11:10:41.217582: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-02-14 11:10:41.218061: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-02-14 11:10:41.220464: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-02-14 11:10:41.222159: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-02-14 11:10:41.227171: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-02-14 11:10:41.228139: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-02-14 11:10:41.228551: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-02-14 11:10:41.244023: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2099965000 Hz
+2020-02-14 11:10:41.252603: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55ef9489fd60 executing computations on platform Host. Devices:
+2020-02-14 11:10:41.252643: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-02-14 11:10:41.253369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla V100-PCIE-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.38
+pciBusID: 0000:82:00.0
+2020-02-14 11:10:41.253413: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-02-14 11:10:41.253429: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-02-14 11:10:41.253442: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-02-14 11:10:41.253455: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-02-14 11:10:41.253468: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-02-14 11:10:41.253480: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-02-14 11:10:41.253519: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-02-14 11:10:41.254394: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-02-14 11:10:41.254432: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+808336
+[8083, 80833, 808336]
+1OB1_8083
+Traceback (most recent call last):
+  File "size_trainer.py", line 182, in <module>
+    train_runner('outfiles/1OB1_all_808336.txt')
+  File "size_trainer.py", line 98, in train_runner
+    char_dataset = tf.data.Dataset.from_tensor_slices(text_as_int)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/data/ops/dataset_ops.py", line 435, in from_tensor_slices
+    return TensorSliceDataset(tensors)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/data/ops/dataset_ops.py", line 2354, in __init__
+    element = structure.normalize_element(element)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/data/util/structure.py", line 111, in normalize_element
+    ops.convert_to_tensor(t, name="component_%d" % i))
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 1184, in convert_to_tensor
+    return convert_to_tensor_v2(value, dtype, preferred_dtype, name)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 1242, in convert_to_tensor_v2
+    as_ref=False)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 1296, in internal_convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/framework/tensor_conversion_registry.py", line 52, in _default_conversion_function
+    return constant_op.constant(value, dtype, name=name)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/framework/constant_op.py", line 227, in constant
+    allow_broadcast=True)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/framework/constant_op.py", line 235, in _constant_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/framework/constant_op.py", line 95, in convert_to_eager_tensor
+    ctx.ensure_initialized()
+  File "/nird/home/rahmada/.conda/envs/tensorflow2/lib/python3.7/site-packages/tensorflow_core/python/eager/context.py", line 492, in ensure_initialized
+    self._context_handle = pywrap_tensorflow.TFE_NewContext(opts)
+tensorflow.python.framework.errors_impl.InternalError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
