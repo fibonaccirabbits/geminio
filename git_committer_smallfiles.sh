@@ -7,5 +7,5 @@ done
 
 # ask for a commit message
 read -p 'You shall not pass, unless you have a message: ' message
+git commit -m "$message"
 echo done! go code some more...
-git commit -m '$message'
